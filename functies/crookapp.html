@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crook app</title>
+
+    <style>
+        #slideholder1 {
+            height:100px ;
+            width: 260px;
+            border: 3px ;
+
+
+        }
+        #slideholder2 {
+            height: 90px;
+            width: 260px;
+            border: 3px ;
+        }
+        #slideholder3 {
+            height: 70px;
+            width: 260px;
+            border: 3px ;
+        }
+    </style>
+
+</head>
+<body>
+<div id="slideholder1"></div>
+<script>
+    var plaatjes = [1,2,3];
+    var teller = 0;
+    var slideholder1 = document.getElementById("slideholder1");
+    slideholder1.style.backgroundImage = "url('../img/hoofd1.png')";
+    slideholder1.addEventListener("click",function() {
+        slideholder1.style.backgroundImage = "url('../img/hoofd" + getHoofd() + ".png')";
+
+    });
+
+    function getHoofd() {
+        if(teller >=plaatjes.length) {
+            teller = 1;
+        } else {
+
+            teller++;
+        }
+
+        console.log(teller);
+        return teller;
+    }
+
+</script>
+<!-- script src="../imageslider.js"></script>-->
+
+<div id="slideholder2"></div>
+<script>
+    var plaatjes = [1,2,3];
+    var teller = 0;
+    var slideholder2 = document.getElementById("slideholder2");
+    slideholder2.style.backgroundImage = "url('../img/eye1.png')";
+    slideholder2.addEventListener("click",function() {
+        slideholder2.style.backgroundImage = "url('../img/eye" + getEye() + ".png')";
+
+    });
+
+    function getEye() {
+        if(teller >=plaatjes.length) {
+            teller = 1;
+        } else {
+
+            teller++;
+        }
+
+        console.log(teller);
+        return teller;
+    }
+</script>
+
+    <div id="slideholder3"></div>
+<script>
+    var plaatjes = [1,2,3];
+    var teller = 0;
+    var slideholder3 = document.getElementById("slideholder3");
+    slideholder3.style.backgroundImage = "url('../img/mond1.png')";
+    slideholder3.addEventListener("click",function() {
+        slideholder3.style.backgroundImage = "url('../img/mond" + getMond() + ".png')";
+
+    });
+
+    function getMond() {
+        if(teller >=plaatjes.length) {
+            teller = 1;
+        } else {
+
+            teller++;
+        }
+
+        console.log(teller);
+        return teller;
+    }
+
+</script>
+</body>
+</html>
